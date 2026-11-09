@@ -1,0 +1,10 @@
+{
+  "name": "cartes-entre-amis",
+  "private": true,
+  "type": "module",
+  "description": "Jeux de cartes en ligne entre amis, en connexion directe (WebRTC / PeerJS).",
+  "scripts": {
+    "start": "npx --yes serve -l 8080 .",
+    "test": "node tests/belote.test.mjs"
+  }
+}
