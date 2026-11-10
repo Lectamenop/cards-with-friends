@@ -31,3 +31,13 @@ export function toast(text, ms = 3500) {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => el.classList.remove('show'), ms);
 }
+
+// Position à l'écran de chaque place (la place 0 en bas), dans l'ordre de jeu.
+const LAYOUTS = {
+  2: ['bottom', 'top'],
+  3: ['bottom', 'tr', 'tl'],
+  4: ['bottom', 'right', 'top', 'left'],
+  5: ['bottom', 'right', 'tr', 'tl', 'left'],
+  6: ['bottom', 'right', 'tr', 'top', 'tl', 'left'],
+};
+export const seatPositions = (n) => LAYOUTS[n] || LAYOUTS[4];
